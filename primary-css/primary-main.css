@@ -19,6 +19,7 @@ img {
 /* width */
 ::-webkit-scrollbar {
   width: 10px;
+  height: 30px;
 }
 
 /* Track */
@@ -562,7 +563,6 @@ img {
           justify-content: space-between;
 }
 
-
 .modal .modal-box .modal-body form .btn-container button {
   width: 90%;
   height: 2em;
@@ -580,7 +580,6 @@ img {
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
-
 
 .modal .modal-box .modal-body form .btn-container span {
   font-size: 17px;
@@ -626,7 +625,8 @@ img {
     padding-right: 5px;
   }
   .modal .modal-box .modal-body {
-    width: 96%;
+    width: 98%;
+    margin: auto;
   }
 }
 
@@ -938,7 +938,7 @@ main .media a:hover > a {
   position: fixed;
   top: 0;
   left: 0;
-  padding: 25vh 0 10vh 0;
+  padding: 20vh 0 10vh 0;
 }
 
 .slides-container .goto-wrap {
@@ -1202,7 +1202,7 @@ body {
 
 main {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   background: radial-gradient(rgba(234, 248, 255, 0.2), rgba(31, 74, 108, 0.3), rgba(41, 41, 41, 0.5));
   position: fixed;
   top: 0;
@@ -1306,3 +1306,4 @@ main .footer-wrap footer {
             transform: translate(0) rotate(0);
   }
 }
+/*# sourceMappingURL=primary-main.css.map */
