@@ -1,0 +1,227 @@
+body{
+    width: 80%;
+    height: 100vh;
+    background-image:linear-gradient(120deg,
+    rgba(202, 237, 248, 0.582),
+    rgba(82, 82, 247, 0.459));
+    text-align:center;
+    margin: 0 auto;
+    justify-content:center;
+    line-height: 1.5;
+    font-size: 0.875rem;
+}
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+
+html{font-size:62%;}
+*{  box-sizing: border-box;}
+h1{    font-size:4rem; color:rgba(82, 82, 247, 0.459)} 
+h2{ font-size:2rem}
+a{    font-size:2.5rem; text-decoration: none;}
+nav {
+    display:flex;
+    justify-content:space-evenly;
+}
+img{display:block;}
+main{ 
+    width: 100%;
+    max-width:130rem;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    align-items: center;
+}
+.slider-container {
+    border: 5px solid rgba(61, 19, 250, 0.062);
+    width: 90vw;
+    margin: 0 auto;
+    height: 65vh;
+    max-width: 100%;
+    position: relative;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    margin-top: 4rem;
+  }
+  .slide {
+    position: absolute;
+    width:100%;
+    height: 100%;
+    background-image:linear-gradient(120deg,
+    rgba(202, 237, 248, 0.582),
+    rgba(109, 109, 248, 0.459));
+    place-items: center;
+    display: grid;
+    transition: all 0.25s ease-in-out;
+  }
+  .slide-img {
+    width: 100%;
+    object-fit: cover;
+  }
+  .slide h1 {
+    font-size: 5rem;
+  }
+  .slide> h2 {
+    position: absolute;
+    top: 70%;
+    left: 70%;
+  }
+.btn-container {
+  display: flex;
+  justify-content:space-evenly;
+}
+.btn{
+  height: 5rem;
+  width: 10rem;
+  border: 5px double rgb(179, 179, 253);
+  border-radius: 15px;
+  margin-top: 5rem;
+  background-image:linear-gradient(160deg,
+  rgba(202, 237, 248, 0.582),
+  rgba(138, 138, 252, 0.459),
+  rgba(202, 237, 248, 0.582));
+  transition: all .75s ease-in-out;
+}
+.btn:hover{
+  height: 5.5rem;
+  width: 11rem;
+  border: 5px double rgb(179, 179, 253);
+  border-radius: 15px;
+  margin-top: 5rem;
+  background-image:linear-gradient(160deg,
+  rgba(202, 237, 248, 0.9),
+  rgba(138, 138, 252, 0.9),
+  rgba(202, 237, 248, 0.9));
+}
+@media screen and (max-width: 930px){
+  .slider-container{
+    height:45vh;
+      transition: all .25s ease-in-out;
+  }
+    .slide h1 {
+    font-size: 5rem;
+  }
+
+}
+@media screen and (max-width: 830px){
+  
+  .slider-container{
+    height:40vh;
+      transition: all .25s ease-in-out;
+  }
+    .slide h1 {
+    font-size: 4rem;
+  }
+
+}
+@media screen and (max-width: 730px){
+  .slider-container{
+    height:35vh;
+      transition: all .25s ease-in-out;
+  }
+    .slide h1 {
+    font-size: 3rem;
+  }
+
+}
+@media screen and (max-width: 630px){
+  .slider-container{
+    height:30vh;
+      transition: all .25s ease-in-out;
+  }
+    .slide h1 {
+    font-size: 2rem;
+  }
+
+}
+@media screen and (max-width: 530px){
+  .slider-container{
+    height:25vh;
+      transition: all .25s ease-in-out;
+  }
+    .slide h1 {
+    font-size: 1.5rem;
+  }
+}
+
+/*============================================*/
+/*=============== navbar =====================*/
+/*============================================*/
+nav {
+  background: lightblue;
+  box-shadow: -10px 10px 10px 8px rgba(23, 23, 23, 0.3);
+  border-radius:0 0 1.2rem 1.2rem;
+}
+.nav-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+.nav-toggle {
+  font-size: 2.5rem;
+  color: black;
+  background: transparent;
+  border-color: transparent;
+  transition:all 0.25s ease-in-out; 
+  cursor: pointer;
+}
+.nav-toggle:hover {
+  color: black;
+  transform: rotate(180deg);
+}
+.logo {
+  height: 40px;
+}
+.links a {
+  color: grey;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+  display: block;
+  padding: 0.5rem 1rem;
+  transition:all 0.25s ease-in-out; 
+}
+.links a:hover {
+  background:grey;
+  color:blue;
+  padding-left: 1.5rem;
+}
+
+.links {
+  height: 0;
+  overflow: hidden;
+  transition:all 0.25s ease-in-out; 
+  display:flex;
+}
+.show-links {
+  height: 10rem;
+}
+@media screen and (min-width: 800px) {
+  .nav-center {
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+  .nav-header {
+    padding: 0;
+  }
+  .nav-toggle {
+    display: none;
+  }
+  .links {
+    height: auto;
+    display: flex;
+  }
+  .links a {
+    padding: 0;
+    margin: 0 0.5rem;
+  }
+  .links a:hover {
+    padding: 0;
+    background: transparent;
+  }
+ 
+
+}

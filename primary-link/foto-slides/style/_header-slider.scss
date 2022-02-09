@@ -1,0 +1,180 @@
+main {
+    width: 100%;
+    height: 100vh;
+    header {
+        width: 100%;
+        position: relative;
+        z-index: 9;
+        .header-wrap {
+            width: 100%;
+            h1 {
+                position: absolute;
+                top: 1.5em;
+                left: 50%;
+                transform: translate(-50%, 0);
+            }
+            .burger-wrap {
+                height: 40px;
+                width: 40px;
+                display: flex;
+                position: absolute;
+                top: 2rem;
+                right: 5em;
+                cursor: pointer;
+                pointer-events: all;
+                z-index: 1;
+                .burger {
+                    width: 38px;
+                    height: 7px;
+                    background-color: $primeryColor;
+                    border-radius: 2px;
+                    @include transition-ease;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    &::before {
+                        content: "";
+                        width: 38px;
+                        height: 7px;
+                        background-color: $primeryColor;
+                        border-radius: 2px;
+                        cursor: pointer;
+                        pointer-events: all;
+                        z-index: 1;
+                        @include transition-ease;
+                        position: absolute;
+                        left: 0;
+                        top: 13px;
+                    }
+                    &::after {
+                        content: "";
+                        width: 38px;
+                        height: 7px;
+                        background-color: $primeryColor;
+                        border-radius: 2px;
+                        cursor: pointer;
+                        pointer-events: all;
+                        z-index: 1;
+                        @include transition-ease;
+                        position: absolute;
+                        left: 0;
+                        top: -13px;
+                    }
+                    &.open {
+                        transform: rotate(1080deg);
+                        background: transparent;
+                        @include transition-ease;
+                        &::before {
+                            transform: rotate(-45deg) translate(5px, -14px);
+                            width: 41px;
+                            background: linear-gradient( to right, rgba($secondaryColor, 0.7), rgba($thirdColor, 0.9), rgba($secondaryColor, 0.7));
+                            @include transition-ease;
+                        }
+                        &::after {
+                            width: 41px;
+                            transform: rotate(45deg) translate(3px, 14px);
+                            background: linear-gradient( to right, rgba($secondaryColor, 0.7), rgba($thirdColor, 0.9), rgba($secondaryColor, 0.7));
+                            @include transition-ease;
+                        }
+                    }
+                }
+            }
+            .nav {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100vw;
+                opacity: 0.93;
+                visibility: hidden;
+                &.open {
+                    visibility: visible;
+                }
+                .nav-menu {
+                    display: flex;
+                    flex-flow: column wrap;
+                    align-items: center;
+                    justify-content: center;
+                    height: 100vh;
+                    overflow: hidden;
+                    background: $primeryColor;
+                    list-style: none;
+                    padding-right: 1rem;
+                    @include transition-ease;
+                    transform: translateY(-100%);
+                    &.open {
+                        transform: translateY(0);
+                    }
+                    .links {
+                        transform: translateX(100vw);
+                        @include transition-ease;
+                        &.open {
+                            transform: translateX(0);
+                        }
+                        &.active a {
+                            color: rgba($secondaryColor, 0.9);
+                        }
+                        .link {
+                            display: inline-block;
+                            font-size: 1.5rem;
+                            text-transform: uppercase;
+                            padding: 2rem 0 0rem 1.5rem;
+                            font-weight: 300;
+                            @include transition-ease;
+                            @include transition-hover;
+                            color: $thirdColor;
+                            pointer-events: all;
+                            &:hover {
+                                color: $secondaryColor;
+                            }
+                        }
+                    }
+                }
+            }
+            @for $i from 1 through 6 {
+                .nav-menu {
+                    .links:nth-child(#{$i}) {
+                        transition-delay: ($i * 0.1s) + 0.3s;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include media-sd {
+    main {
+        header {
+            .header-wrap {
+                h1 {
+                    height: 2px;
+                    position: absolute;
+                    top: 12vh;
+                    z-index: 999;
+                }
+                .burger-wrap {
+                    display: none;
+                }
+                .nav {
+                    visibility: visible;
+                    .nav-menu {
+                        background: transparent;
+                        height: 12vh;
+                        padding: 0;
+                        display: flex;
+                        flex-direction: row;
+                        align-items: baseline;
+                        flex-wrap: wrap;
+                        transform: translateY(0);
+                        .links {
+                            transform: translateX(0);
+                            .link {
+                                font-size: 0.8rem;
+                                text-shadow: 1px 1px 1px rgba($secondaryColor, 0.9);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

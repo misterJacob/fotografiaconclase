@@ -1,0 +1,111 @@
+$backgroundLight: rgb(243, 255, 251);
+$backgroundLightHeader: rgb(252, 251, 255);
+$primaryColor:rgb(41, 41, 41);
+$primeryColor:rgb(41, 41, 41);
+$secondaryColor: rgb(31, 74, 108);
+$thirdColor: rgb(234, 248, 255);
+$backgroundDark: rgba(1, 1, 1, 0.8);
+$backgroundDarkLighter: rgba(44, 44, 44, 0.8);
+a {
+    text-decoration: none;
+    color: $primeryColor;
+    font-size: 1.0rem;
+    &:hover {
+        color: $secondaryColor;
+    }
+}
+
+h1 {
+    font-size: 1.2rem;
+}
+
+img {
+    display: block;
+}
+
+
+/* width */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+
+/* Track */
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px rgba(16, 16, 34, 0.753);
+    border-radius: 1000px;
+}
+
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+    background: rgba(113, 127, 247, 0.2);
+    border-radius: 10px;
+}
+
+
+/* Handle on hover */
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 152, 179, 0.2);
+}
+
+@mixin transition-slow {
+    transition: all 0.7s ease-in-out;
+}
+
+@mixin transition-ease {
+    transition: all 0.3s ease-in-out;
+}
+
+@mixin transition-hover {
+    transition: all 0.2s ease-in-out;
+}
+
+@function set-text-color($color) {
+    @if(lightness($color)> 40%) {
+        @return #000;
+    }
+    @else {
+        @return #fff;
+    }
+}
+
+@mixin media-mob {
+    @media screen and (max-width: 300px) {
+        @content;
+    }
+}
+
+@mixin media-xsd {
+    @media screen and (max-width: 599px) {
+        @content;
+    }
+}
+
+@mixin media-sd {
+    @media screen and (min-width: 600px) {
+        @content;
+    }
+}
+
+@mixin media-md {
+    @media screen and (min-width: 758px) {
+        @content;
+    }
+}
+
+@mixin media-lg {
+    @media screen and (min-width: 1024px) {
+        @content;
+    }
+}
+
+@mixin media-xl {
+    @media screen and (min-width: 1600px) {
+        @content;
+    }
+}
