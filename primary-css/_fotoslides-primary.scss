@@ -52,6 +52,10 @@
                             object-fit: cover;
                             border-radius: 5px;
                         }
+                        &:hover {
+                            opacity: 0.7;
+                            @include transition-slow;
+                        }
                     }
                     span {
                         position: absolute;
@@ -63,15 +67,15 @@
                     .arrow {
                         position: absolute;
                         top: 75%;
-                        left: 80%;
-                        transform: translate(-80%, -75%)rotate(180deg);
+                        left: 50%;
+                        transform: translate(-50%, -75%)rotate(180deg);
                         font-size: 1.2rem;
-                        color: rgba($secondaryColor, 0.5);
+                        color: rgba($secondaryColor, 0.1);
                     }
                     &:hover .arrow {
-                        top: 50%;
+                        top: 70%;
                         left: 50%;
-                        transform: translate(-50%, -50%)rotate(140deg);
+                        transform: translate(-50%, -75%)rotate(175deg);
                         @include transition-slow;
                         font-size: 1.5rem;
                         color: rgba($thirdColor, 0.5);

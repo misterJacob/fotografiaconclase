@@ -997,6 +997,12 @@ main .media a:hover > a {
   border-radius: 5px;
 }
 
+.slides-container .goto-wrap .go-to .items-goto .link .image-wrap:hover {
+  opacity: 0.7;
+  -webkit-transition: all 0.7s ease-in-out;
+  transition: all 0.7s ease-in-out;
+}
+
 .slides-container .goto-wrap .go-to .items-goto .link span {
   position: absolute;
   top: 90%;
@@ -1009,18 +1015,18 @@ main .media a:hover > a {
 .slides-container .goto-wrap .go-to .items-goto .link .arrow {
   position: absolute;
   top: 75%;
-  left: 80%;
-  -webkit-transform: translate(-80%, -75%) rotate(180deg);
-          transform: translate(-80%, -75%) rotate(180deg);
+  left: 50%;
+  -webkit-transform: translate(-50%, -75%) rotate(180deg);
+          transform: translate(-50%, -75%) rotate(180deg);
   font-size: 1.2rem;
-  color: rgba(31, 74, 108, 0.5);
+  color: rgba(31, 74, 108, 0.1);
 }
 
 .slides-container .goto-wrap .go-to .items-goto .link:hover .arrow {
-  top: 50%;
+  top: 70%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%) rotate(140deg);
-          transform: translate(-50%, -50%) rotate(140deg);
+  -webkit-transform: translate(-50%, -75%) rotate(175deg);
+          transform: translate(-50%, -75%) rotate(175deg);
   -webkit-transition: all 0.7s ease-in-out;
   transition: all 0.7s ease-in-out;
   font-size: 1.5rem;
