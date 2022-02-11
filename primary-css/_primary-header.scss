@@ -1,22 +1,38 @@
 .header {
     z-index: 5000;
-    width: 100%;
-    height: 10vh;
+    width: 100vw;
+    height: 20vh;
     background: transparent;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    .title {
+        height: 10vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        h1 {
+            color: rgba($thirdColor, 0.8);
+            text-shadow: 2px 2px 2px rgba($secondaryColor, 0.8);
+            font-size: 1.2rem;
+            padding-top: 0.5em;
+            text-align: center;
+        }
+    }
     .header-wrap {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        flex: 1;
+        width: 100vw;
+        height: 10vh;
         .burger-wrap {
             height: 40px;
             width: 40px;
             display: flex;
-            position: absolute;
-            right: 5em;
+            position: relative;
+            top: 10%;
+            left: 2em;
             cursor: pointer;
             pointer-events: all;
             z-index: 1;
@@ -77,12 +93,13 @@
             }
         }
         .nav {
+            width: 100vw;
+            height: 100vh;
+            opacity: 0.93;
+            visibility: hidden;
             position: fixed;
             top: 0;
             left: 0;
-            width: 100vw;
-            opacity: 0.93;
-            visibility: hidden;
             &.open {
                 visibility: visible;
             }
@@ -107,12 +124,9 @@
                     &.open {
                         transform: translateX(0);
                     }
-                    &.active>a {
-                        color: $secondaryColor;
-                    }
                     .link {
                         display: inline-block;
-                        font-size: 1.5rem;
+                        font-size: 2.5rem;
                         text-transform: uppercase;
                         padding: 2rem 0 0rem 1.5rem;
                         font-weight: 300;
@@ -121,6 +135,9 @@
                         color: $thirdColor;
                         pointer-events: all;
                         &:hover {
+                            color: $secondaryColor;
+                        }
+                        &.active {
                             color: $secondaryColor;
                         }
                     }
@@ -143,10 +160,58 @@
     }
 }
 
+// @include media-sd {
+//     main {
+//         .header {
+//             text-shadow: 1px 1px 1px rgba($thirdColor, 0.8);
+//             width: 100vw;
+//             .title {
+//                 h1 {
+//                     font-size: 2.0rem;
+//                 }
+//             }
+//             .header-wrap {
+//                 .burger-wrap {
+//                     display: none;
+//                 }
+//                 .nav {
+//                     display: flex;
+//                     justify-content: center;
+//                     align-items: center;
+//                     visibility: visible;
+//                     width: 100%;
+//                     height: 20vh;
+//                     .nav-menu {
+//                         background: transparent;
+//                         transform: translateY(0);
+//                         width: 100%;
+//                         max-width: 1000px !important;
+//                         height: 15vh;
+//                         display: flex;
+//                         flex-direction: row;
+//                         justify-content: center;
+//                         align-items: baseline;
+//                         .items {
+//                             transform: translateX(0);
+//                             .link {
+//                                 font-size: 1.5rem;
+//                             }
+//                         }
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }
 @include media-sd {
     main {
         .header {
             text-shadow: 1px 1px 1px rgba($thirdColor, 0.8);
+            .title {
+                h1 {
+                    font-size: 2.0rem;
+                }
+            }
             .header-wrap {
                 .burger-wrap {
                     display: none;
@@ -172,44 +237,7 @@
                             transform: translateX(0);
                             .link {
                                 font-size: 1.5rem;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-
-@include media-md {
-    main {
-        .header {
-            text-shadow: 1px 1px 1px rgba($thirdColor, 0.8);
-            .header-wrap {
-                .burger-wrap {
-                    display: none;
-                }
-                .nav {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    visibility: visible;
-                    width: 100%;
-                    height: 20vh;
-                    .nav-menu {
-                        background: transparent;
-                        transform: translateY(0);
-                        width: 100%;
-                        max-width: 1000px !important;
-                        height: 15vh;
-                        display: flex;
-                        flex-direction: row;
-                        justify-content: center;
-                        align-items: baseline;
-                        .items {
-                            transform: translateX(0);
-                            .link {
-                                font-size: 1.9rem;
+                                padding-top: 2em;
                             }
                         }
                     }

@@ -18,10 +18,10 @@ body {
 }
 
 main {
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     background: radial-gradient( rgba($thirdColor, 0.2), rgba($secondaryColor, 0.3), rgba($primeryColor, 0.5), );
-    position: fixed;
+    position: relative;
     top: 0;
     left: 0;
     padding-top: 20vh;
