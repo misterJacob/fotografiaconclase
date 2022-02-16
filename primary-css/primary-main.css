@@ -418,6 +418,7 @@ img {
   display: block;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
+  z-index: 9000;
 }
 
 .modal .modal-box {
@@ -513,6 +514,10 @@ img {
   border: 2px solid rgba(31, 74, 108, 0.5);
 }
 
+.modal .modal-box .modal-body form .form-group textarea {
+  height: 6em;
+}
+
 .modal .modal-box .modal-body form .form-group .icon {
   position: absolute;
   top: 50%;
@@ -570,20 +575,22 @@ img {
 
 .modal .modal-box .modal-body .modal-footer {
   width: 10vw;
-  right: 0.5em;
+  right: 0.9em;
   top: 10px;
   position: absolute;
 }
 
-.modal .modal-box .modal-body .modal-footer .close-btn {
+.modal .modal-box .modal-body .modal-footer .modal-close-btn {
   padding: 4px 8px;
   background-color: rgba(234, 248, 255, 0.7);
   border-radius: 1000px;
   cursor: pointer;
   border: 1px solid transparent;
+  pointer-events: all;
 }
 
-.modal .modal-box .modal-body .modal-footer .close-btn:hover {
+.modal .modal-box .modal-body .modal-footer .modal-close-btn:hover {
+  z-index: 5000;
   opacity: 0.5;
   border-color: rgba(234, 248, 255, 0.7);
   -webkit-box-shadow: 1px 1px 1px 1px rgba(41, 41, 41, 0.5);

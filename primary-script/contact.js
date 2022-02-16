@@ -5,7 +5,8 @@ message.addEventListener('click', () => {
     modal.classList.add('open')
 })
 
-const close = document.querySelector('.close-btn');
-close.addEventListener('click', () => {
+const closeDown = document.querySelector('.modal-close-btn');
+
+closeDown.addEventListener('click', () => {
     modal.classList.remove('open')
 })

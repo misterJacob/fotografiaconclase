@@ -65,6 +65,7 @@
     &.open {
         display: block;
         transition: all 0.5s ease-in-out;
+        z-index: 9000;
     }
     .modal-box {
         position: relative;
@@ -126,6 +127,9 @@
                             border: 2px solid rgba($secondaryColor, 0.5);
                         }
                     }
+                    textarea {
+                        height: 6em;
+                    }
                     .icon {
                         position: absolute;
                         top: 50%;
@@ -177,16 +181,18 @@
             }
             .modal-footer {
                 width: 10vw;
-                right: 0.5em;
+                right: 0.9em;
                 top: 10px;
                 position: absolute;
-                .close-btn {
+                .modal-close-btn {
                     padding: 4px 8px;
                     background-color: rgba($thirdColor, 0.7);
                     border-radius: 1000px;
                     cursor: pointer;
                     border: 1px solid transparent;
+                    pointer-events: all;
                     &:hover {
+                        z-index: 5000;
                         opacity: 0.5;
                         border-color: rgba($thirdColor, 0.7);
                         box-shadow: 1px 1px 1px 1px rgba($primeryColor, 0.5);
