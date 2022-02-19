@@ -1,13 +1,15 @@
 .slides-container {
     width: 100%;
+    max-width: 850px;
+    margin: auto;
     min-height: 80vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    padding: 20vh 0 10vh 0;
+    // position: fixed;
+    // top: 0;
+    // left: 0;
+    // padding: 20vh 0 10vh 0;
     .goto-wrap {
         overflow-y: auto;
         width: 95%;

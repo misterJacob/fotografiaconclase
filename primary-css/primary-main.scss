@@ -19,6 +19,8 @@ body {
 
 main {
     width: 100vw;
+    max-width: 850px;
+    margin: auto;
     height: 100vh;
     background: radial-gradient( rgba($thirdColor, 0.2), rgba($secondaryColor, 0.3), rgba($primeryColor, 0.5), );
     position: relative;
